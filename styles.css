@@ -1,0 +1,215 @@
+/* css reset at start */
+*{
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* css varible */:root{
+    --navbar-height:59px ;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    /* position: relative;this property will adjust navbar before according  navbar size */
+     /* position: absolute;allow images to come over navbar */
+     position: sticky;
+     top: 0px;
+   
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;/*allow to see content wich hide due to baground color*/
+    opacity: 0.4;/*to make it liitle blurred*/
+ }
+/* css for navbar logo image */
+ #logo img{
+    width: 60px;
+    filter: invert(100%); 
+    border-radius: 40px;
+    margin: 3px 5px;
+}
+#logo{
+    margin: 10px 35px;
+}
+/* styling list n navigation bar */
+ #navbar ul{
+    display: flex;
+ }
+ 
+#navbar ul li{
+    /* color: aliceblue; */
+    list-style: none;
+    font-size: 1.3rem;
+
+}
+/* giving padding to the to create space between list in a so each element will wrok individullay */
+#navbar ul li a{
+  display: block ; /*make display block for adding more property*/
+  padding: 3px 22px;
+  text-decoration: none;
+  border-radius: 20px;
+  color: white;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/* basically pesudo selector are used to set baground */
+#home::before{
+    content: "";
+    background: url("img5.avif")no-repeat center center/cover;
+    position: absolute;
+    top: 0;/*this top0 nd left 0 lso used to images cover on navbar*/
+    left: 0;
+    height: 72%;
+    width: 100%;
+    z-index: -1;/*allow to see content wich hide due to baground color*/
+    opacity: 0.98;/*to make it liitle blurred*/
+
+}
+/* /css to home section  */
+#home{
+    display: flex;
+    flex-direction: column;/*used it to make flex not in row but in column*/
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 450px;/*overlapping problem solve by increasing heigth from 200 to 633*/
+    cursor: pointer;
+}
+/* services css */
+#services{
+    margin: 34px;
+    /* border: 2px solid red; */
+    display: flex;
+    
+
+}
+#services .box{
+  border: 2px solid brown;
+  padding: 34px;
+  margin: 3px 6px;
+  border-radius: 20px;
+  background-color:rgb(228, 226, 226);
+  
+  /* margin-top: 6rem; */
+  
+}
+#services .box img{
+    height: 160px;
+    align-items: center;
+    text-align: center;
+   }
+/* client section csss */
+#client-section{
+ height: 344px;
+ position: relative;/*this property will allow images to take needed place only*/
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("img2.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+/* css to make all logo at centre */
+#client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#client img{
+    height: 70px;
+}
+.client-item{
+    padding: 34px ;
+}
+/* contact-section */
+#contact{
+    position: relative;
+    
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    background: url("1.png")no-repeat center center/cover;
+}
+#contact-box form{
+    width: 40%;
+
+}
+#contact-box label{
+    font-size: 1.rem;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+
+}
+/* following two used to ontact us look */
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+}
+#contact-box  input,#contact-box textarea{
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 9px;
+    font-size: 1.4rem;
+
+}
+/* utility class  means creating class inside tag h1 primary and home h1 both used to give css to same line*/
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    
+    
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.btn{
+    padding: 6px 25px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(53, 48, 48);
+
+}
+.center{
+    text-align: center;
+}
